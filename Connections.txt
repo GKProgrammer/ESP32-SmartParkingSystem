@@ -1,0 +1,26 @@
+Components required for ESP32 Smart Plant Care Device:
+
+1. ESP32 DEVKIT V1
+2. OLED Display 128x64 px (I2C)
+3. IR Distance Sensor (5 required, 4 for parking slots and 1 for gate)
+4. SG90 Servo Motor (To be used as gate)
+5. LEDs (4 required)
+6. 220 Ohm Resistors (4 required)
+7. Connecting Jumper Wires
+8. 5V 2A Power Adapter
+9. An active 2.4 Ghz Authentication less or WPA/WPA2 wifi connection
+
+ESP32 DEVKIT V1 Wiring Connections:
+  IR Sensors (Slots): Pins 32, 33, 25, 26
+  LEDs (Slots): Pins 19, 18, 5, 17 (Along with Resistor for each in series with the LED)
+  IR Sensor (Gate): Pin 27.
+  Servo Motor (Gate): Pin 16.
+  OLED Display: Standard I2C pins (SDA = 21, SCL = 22).
+
+NOTE: Its important to not connect the servo directly to the ESP32's 3.3V Out or the VIN pin because it may fry the board.
+Try to connect it directly to the power source. The rest can be connected directly to the board's power including OLED connection to the 3.3V out pin.
+
+Required Libraries:
+  ESP32Servo by Kevin Harrington (Standard Servo.h can be glitchy on ESP32).
+  Adafruit SSD1306 (For the OLED).
+  Adafruit GFX Library (Dependency for the OLED).
