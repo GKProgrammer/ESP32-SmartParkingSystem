@@ -6,8 +6,8 @@
 #include <ESP32Servo.h>
 
 // --- Wi-Fi Credentials ---
-const char* ssid = "Mantra_Jio";
-const char* password = "JeevanKaMantra@24";
+const char* ssid = "SSID";
+const char* password = "Password";
 
 // --- OLED Display Setup ---
 #define SCREEN_WIDTH 128
